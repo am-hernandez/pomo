@@ -16,20 +16,13 @@ function countdown(){
                 duration = durationInput.value;
             } else {
                 form_submit.disabled = false;
+                time_remaining.innerText = "--";
             }
         }
     } else if(duration >= 1){
         time_remaining.innerText = duration;
         duration--;
     }
-}
-
-// create h3 for ul
-function createH3(reference){
-    let h3 = document.createElement("h3");
-    sessions_remaining.parentNode.appendChild(h3);
-    sessions_remaining.parentNode.insertBefore(h3, referenceNode);
-    h3.innerHTML = "Sessions remaining:";
 }
 
 // remove session <li> function
@@ -41,12 +34,10 @@ function killChild(parent, childIdx){
 form_submit.addEventListener("click", function() {
     form_submit.disabled = true;
     duration = durationInput.value;
-    // time_remaining.innerHTML = duration;
     let sessions = sessionsInput.value;
     for(let i=1; i<=sessions; i++){
         let li = document.createElement("li");
         sessions_remaining.appendChild(li).innerHTML = `Session ${i}`;
     }
-    // createH3(sessions_remaining);
     setInterval(countdown, 1000);
 });
