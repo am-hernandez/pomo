@@ -1,103 +1,126 @@
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-    background-color: #37515F;
-    color: #1F0812;
-    font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #b1ede8, #edb1b6);
+  color: #1f0812;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
-    text-align: center;
-    border-bottom: 8px solid #B1EDE8;
-    margin-bottom: 2rem;
-    padding: 1em 0;
-    background-color: #FFFCF9;
-    font-family: 'Josefin Sans', sans-serif;
-    box-shadow: 0 8px 10px 2px rgba(0, 0, 0, 0.5)
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #b1ede8);
+  margin-bottom: 2rem;
+  padding: 1em 0;
+  background-color: #fffcf9;
+  font-family: "Josefin Sans", sans-serif;
+  box-shadow: 0 8px 5px 2px rgba(0, 0, 0, 0.5),
+    inset 0 5px 3px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -5px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 footer {
-    /* flex: 1; */
-    text-align: center;
-    margin: 2rem 0 0;
-    padding: .5rem 0;
-    background-color: #B1EDE8;
+  text-align: center;
+  margin: 2rem 0 0;
+  padding: 0.5rem 0;
+  color: #edb1b6;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -7px 0 19px -7px rgba(255, 255, 255, 0.5),
+    inset 7px 0 19px -7px rgba(255, 255, 255, 0.5);
 }
 
-h1, h2 {
-    margin: 0;
-    padding: 0;
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
 }
 
 button {
-    border: solid 1px #8cbbb7;
-    border-radius: 5px;
-    padding: 0;
-    background-color: #B1EDE8;
-    font-family: 'Josefin Sans', sans-serif;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5),
-        inset 0 0 5px 1px rgba(255, 255, 255, 0.5),
-        inset 0 0 5px 1px rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  background-color: #b1ede8;
+  font-family: "Josefin Sans", sans-serif;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5),
+    inset 0 2px 3px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
 button:active {
-    border: solid 1px D95353;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.8),
-        inset 0 0 5px 1px rgba(255, 255, 255, 0.8);
+  transform: translate(0, 1px);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5),
+    inset 0 -2px 3px 1px rgba(0, 0, 0, 0.4),
+    inset 0 2px 3px 1px rgba(255, 255, 255, 0.4);
 }
 
 .container {
-    margin-bottom: 1rem;
-    border: solid 4px #1F0812;
-    border-radius: 20px;
-    background-color: #D95353;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5),
-        inset 0 0 10px 2px rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background-color: #d4d0cf;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.5),
+    inset 0 5px 3px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -5px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
-#timer_container {
-    width: 8rem;
-    margin: auto;
-    padding: 1em 0;
-    text-align: center;
+#timer_display {
+  width: 40%;
+  margin: auto;
+  padding: 1em 0;
 }
 
 #time_remaining {
-    padding: 1em;
-    text-align: center;
-    font-size: 2rem;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
 }
 
 #sessions_remaining {
-    list-style: none;
-    padding-left: 0;
-    color: #1F0812;
+  list-style: none;
+  padding-left: 0;
+  color: #1f0812;
 }
 
 #sessions_remaining li {
-    background-color: #B1EDE8;
-    border-bottom: 1px solid #1F0812;
-    box-shadow: inset -7px 0 10px -7px rgba(255, 255, 255, 0.8),
-        inset 7px 0 10px -7px rgba(255, 255, 255, 0.8);
+  padding: 0.2em;
+  text-align: center;
+  background-color: #121818;
+  color: #fff;
+  border-bottom: 1px solid #324342;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5),
+    inset 0 2px 3px 1px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 3px 1px rgba(0, 0, 0, 0.4);
 }
 
 #timer_input {
-    width: 80%;
-    margin: auto;
-    padding: 1rem;
+  width: 80%;
+  max-width: 350px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+#timer_input > form {
+  display: flex;
+  flex-direction: column;
 }
 
 #form_submit {
-    width: 5rem;
-    height: 2rem;
+  display: block;
+  width: 50%;
+  height: 2rem;
+  margin: auto;
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
