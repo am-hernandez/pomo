@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset=UTF-8>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <title>Pomo Timer</title>
   </head>
   <body>
     <header>
-      <h1>pomodoro timer</h1>
+      <h1>pomo</h1>
     </header>
     <main>
-      <div class="container" id="timer_container">
-        <h2 id="time_remaining">--</h2>
-        <ul id="sessions_remaining">
-        </ul>
+      <div class="container" id="timer_display">
+        <h2 id="time_remaining">
+          <label id="minutes">00</label>:<label id="seconds">00</label>
+        </h2>
+        <ul id="sessions_remaining"></ul>
       </div>
       <div class="container" id="timer_input">
         <form>
           <label for="duration">Session &nbsp; Length:</label>
-          <input type="number" id="duration" name="duration"><br><br>
+          <input type="number" id="duration" name="duration" /><br /><br />
           <label for="sessions">Num of Sessions:</label>
-          <input type="number" id="sessions" name="lname"><br><br>
+          <input type="number" id="sessions" name="lname" /><br /><br />
         </form>
         <button type="submit" id="form_submit">start timer</button>
       </div>
     </main>
-    <footer>
-      developed by a.m.hernandez &copy;2021
-    </footer>
+    <footer>developed by a.m.hernandez &copy;2021</footer>
     <script src="pomo.js"></script>
   </body>
 </html>
