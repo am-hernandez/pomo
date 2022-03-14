@@ -62,19 +62,23 @@ function killChild(parent, childIdx) {
 // listen for click on form submit button
 form_submit.addEventListener("click", function () {
   form_submit.disabled = true;
+
   // create sessions list
-  let sessions = sessionsInput.value;
+  let sessions = parseInt(sessionsInput.value);
   for (let i = 1; i <= sessions; i++) {
     let li = document.createElement("li");
     sessions_remaining.appendChild(li).innerHTML = `Session: ${i}`;
-    if (i % 3 === 0) {
+    if (i !== sessions && i % 3 === 0) {
       let longBreakLi = document.createElement("li");
       sessions_remaining.appendChild(longBreakLi).innerHTML = `long break!`;
+    } else if (i === sessions) {
+      continue;
     } else {
       let smallBreakLi = document.createElement("li");
       sessions_remaining.appendChild(smallBreakLi).innerHTML = `small break!`;
     }
   }
+
   // get session length in seconds, start interval
   duration = durationInput.value * 60;
   timer_display.style.backgroundColor = "#b6edb1";
